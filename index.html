@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+<body id="hom">
+    
+  <section class="menu" id="menu">
+        <div class="box-container" id="box-container">
+            
+            <div class="card">
+                <div class="box">
+                    <span class="price">₹330 for one</span>
+                    <img src="img/salad.jpg" alt="img">
+                    <h3>fruit salad</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <button href="#" class="btn cart" id="cart">Add to cart</button>
+                    <button href="#" class="btn order" id="order">Order Now</button>
+                </div>
+            </div>
+       </div>
+  </section>
+  <button class="btn order" onclick="myFunction()">Add</button>
+  <br>
+
+
+<script>
+function myFunction() {
+    
+    var c = document.createElement("div");
+    c.className="card";
+
+    var d = document.createElement("div");
+    d.className="box";
+
+    var e1 = document.createElement("span");
+    e1.className="price";
+    var t1 = document.createTextNode("₹330 for one");
+
+    var e2 = document.createElement("img");
+    e2.src ="img/salad.jpg";
+
+    var e3 = document.createElement("h3");
+    var t3 = document.createTextNode("fruit salad");
+    
+    var e4 = document.createElement("div");
+    e4.className="stars";
+    
+
+    var f=[];
+    var inc=0;
+    while (inc < 5) {
+        f.push(document.createElement("i"));
+        f[inc].className="fas fa-star";
+        inc++;
+    }
+    
+    var e5 = document.createElement("button");
+    e5.className="btn cart";
+    var t5 = document.createTextNode("Add to cart");
+
+    var e6 = document.createElement("button");
+    e6.className="btn order";
+    var t6 = document.createTextNode("Order Now");
+
+
+
+    e1.appendChild(t1);
+    e3.appendChild(t3);
+    
+
+    let incr = 0;
+    while (incr < 5) {
+        e4.appendChild(f[incr]);
+        console.log("hi");
+        incr++;
+    }
+    e5.appendChild(t5);
+    e6.appendChild(t6);
+
+    d.appendChild(e1);
+    d.appendChild(e2);
+    d.appendChild(e3);
+    d.appendChild(e4);
+    d.appendChild(e5);
+    d.appendChild(e6);
+
+    c.appendChild(d);
+   
+   
+  
+    document.getElementById("box-container").appendChild(c);
+
+}
+</script>
+
+</body>
+</html>
+<!-- var c = document.createElement("div");
+c.className="card";
+var d = document.createElement("div");
+d.className="box";
+var e1 = document.createElement("span");
+e1.className="price";
+
+var t1 = document.createTextNode("₹330 for one");
+
+e1.appendChild(t1);
+d.appendChild(e1);
+c.appendChild(d);
+
+
+document.getElementById("box-container").appendChild(c); -->
